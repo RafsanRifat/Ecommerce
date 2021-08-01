@@ -60,4 +60,6 @@ class ShippingAddress(models.Model):
     def __str__(self):
         return self.address
 
+# Last work of this project was image url setup completely, and fix error if image is not found in database
+
 
