@@ -50,6 +50,11 @@ class OrderItem(models.Model):
     def __str__(self):
         return str(self.product.name)
 
+    @property
+    def get_total(self):
+        total = self.product.price * self.quantity
+        return total
+
 
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, blank=True, null=True)
