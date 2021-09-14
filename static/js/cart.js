@@ -11,7 +11,11 @@ for (var i = 0; i < updateBtns.length; i++) {
         if (user === 'AnonymousUser') {
             console.log('Not logged in')
         } else {
-            console.log('user is loged in, sending data...')
+            updateUserOrder(productId, action)
         }
     })
+}
+
+function updateUserOrder(productId, aciton){
+    console.log('user is loged in, sending data...')
 }
