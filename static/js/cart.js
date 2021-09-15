@@ -16,22 +16,24 @@ for (var i = 0; i < updateBtns.length; i++) {
     })
 }
 
-function updateUserOrder(productId, aciton) {
-    console.log('user is loged in, sending data...')
+function updateUserOrder(productId, action) {
+    // console.log('user is loged in, sending data...')
 
     var url = '/update_item/'
+    console.log('URL', url)
 
     fetch(url, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-CSRFToken' :csrftoken,
         },
         body: JSON.stringify({'productId': productId, 'action': action})
     })
         .then((response) => {
-            return response.json()
+            return response.json();
         })
         .then((data) => {
-            console.log('data:', data)
+            location.reload()
         })
 }
