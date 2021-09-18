@@ -1,8 +1,16 @@
 body{
 	background-color: hsl(0, 0%, 98%);
 }
+.container{
+	padding-top: 150px;
+}
 .navbar{
 	margin-bottom: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
 }
 
 h1,h2,h3,h4,h5,h6{
