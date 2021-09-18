@@ -40,6 +40,10 @@ def updateItem(request):
     productId = data['productId']
     action = data['action']
 
-    print('productId:', productId)
     print('action:', action)
+    print('productId:', productId)
+
+
+    customer = request.user.customer
+    product = Product.objects.get(id=productId)
     return JsonResponse('Item was added', safe=False)
