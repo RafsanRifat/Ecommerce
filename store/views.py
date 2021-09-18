@@ -56,5 +56,5 @@ def updateItem(request):
         orderItem.quantity = (orderItem.quantity - 1)
 
     orderItem.save()
-    
+
     return JsonResponse('Item was added', safe=False)
